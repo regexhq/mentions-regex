@@ -112,5 +112,5 @@ Released under the [`MIT`][license-url] license.
 [contrib-more]: http://j.mp/1stW47C
 [contrib-graf]: https://github.com/regexps/mentions-regex/graphs/contributors
 
-[regexps-img]: http://img.shields.io/badge/regexps-approved-brightgreen.svg
+[regexps-img]: http://img.shields.io/badge/regexps-approved-brightgreen.svg?style=flat
 [regexps-url]: https://github.com/regexps
