@@ -35,7 +35,7 @@ str.match(mentionsRegex({flags: 'g'}))
 //=> [' @tunnckoCore ', ' @face ']
 
 str.match(mentionsRegex({flags: 'g', startSpace: false}))
-//=> [' @tunnckoCore ', ' @face ', '@face ']
+//=> ['@first ', '@tunnckoCore ', '@face ']
 
 str.match(mentionsRegex({flags: 'g', endSpace: false}))
 //=> [' @tunnckoCore ', ' @face ', ' @al', ' @last']

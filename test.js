@@ -9,5 +9,5 @@
 
 var mentionsRegex = require('./index');
 var str = '@first github @tunnckoCore and @face some @al.so email@here.com global @last'
-var res = str.match(mentionsRegex({flags: 'g', dot: true}))
+var res = str.match(mentionsRegex({flags: 'g', startSpace: false}))
 console.log(res)
