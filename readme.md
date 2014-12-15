@@ -11,7 +11,7 @@ $ npm test
 ```
 
 ## Usage
-todo
+> For more use-cases see [tests](./test.js)
 
 
 ## Authors & Contributors
