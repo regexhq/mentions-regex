@@ -26,7 +26,7 @@ mentionsRegex({flags: 'g'}).test('github @tunnckoCore')
 mentionsRegex({endSpace: false}).test('github @tunnckoCore')
 //=> true
 
-var str = '@first github @tunnckoCore and @face some @al.so email@here.com global @last'
+var str = '@first git @tunnckoCore and @face some @al.so email@here.com glob @last'
 
 str.match(mentionsRegex())
 //=> [' @tunnckoCore ']
@@ -51,6 +51,12 @@ str.match(mentionsRegex({flags: 'g', dot: true}))
 
 str.match(mentionsRegex({flags: 'g', dot: true, length: 5}))
 //=> [' @face ', ' @al.so ']
+
+str.match(mentionsRegex({flags: 'g', dot: true, startSpace: false}))
+//=> ['@first ', '@tunnckoCore ', '@face ', '@al.so ', '@here.com ']
+
+str.match(mentionsRegex({flags: 'g', dot: true, startSpace: false, endSpace: false}))
+//=> ['@first', '@tunnckoCore', '@face', '@al.so', '@here.com ', '@last']
 ```
 
 
