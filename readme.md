@@ -1,4 +1,4 @@
-# mentions-regex [![NPM version][npmjs-img]][npmjs-url] [![Build Status][travis-img]][travis-url] [![regexps org][regexps-img]][regexps-url]
+# [![NPM version][npmjs-img]][npmjs-url] [![MIT license][license-img]][license-url] [![Build Status][travis-img]][travis-url] [![regexps org][regexps-img]][regexps-url]
 > The correct mention(s) regex. Regex done right!
 
 
@@ -95,7 +95,7 @@ Released under the [`MIT`][license-url] license.
 [coveralls-img]: https://img.shields.io/coveralls/regexps/mentions-regex.svg?style=flat
 
 [license-url]: https://github.com/regexps/mentions-regex/blob/master/license.md
-[license-img]: https://img.shields.io/badge/license-MIT-blue.svg
+[license-img]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat
 
 [travis-url]: https://travis-ci.org/regexps/mentions-regex
 [travis-img]: https://img.shields.io/travis/regexps/mentions-regex.svg?style=flat
@@ -112,5 +112,5 @@ Released under the [`MIT`][license-url] license.
 [contrib-more]: http://j.mp/1stW47C
 [contrib-graf]: https://github.com/regexps/mentions-regex/graphs/contributors
 
-[regexps-img]: http://img.shields.io/badge/regexps-approved-brightgreen.svg?style=flat
 [regexps-url]: https://github.com/regexps
+[regexps-img]: http://img.shields.io/badge/regexps-approved-brightgreen.svg?style=flat
