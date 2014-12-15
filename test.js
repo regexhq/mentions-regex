@@ -8,6 +8,6 @@
 'use strict';
 
 var mentionsRegex = require('./index');
-var str = 'some @mention as @he.re a@nd @second ols @He-wee more @men.tion'
-
-console.log(str.match(mentionsRegex({flags: 'g'})))
+var str = '@first github @tunnckoCore and @face some @al.so email@here.com global @last'
+var res = str.match(mentionsRegex({flags: 'g', dot: true}))
+console.log(res)

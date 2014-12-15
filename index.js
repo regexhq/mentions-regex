@@ -7,15 +7,21 @@
 
 'use strict';
 
-module.exports =  function metntionsRegex(opts) {
-  opts = opts || {};
+/**
+ * The correct mention(s) regex. Regex done right!
+ *
+ * @param  {Object} `options`
+ * @return {RegExp}
+ */
+module.exports =  function metntionsRegex(options) {
+  options = options || {};
 
-  var startSpace = opts.startSpace === false ? '' : '(?:\\s+)';
-  var endSpace = opts.endSpace === false ? '' : '(?:\\s+)';
-  var length = '{1,' + (opts.length || 30) + '}';
-  var match = opts.match || '\\w' + length;
+  var startSpace = options.startSpace === false ? '' : '\\s+';
+  var endSpace = options.endSpace === false ? '' : '\\s+';
+  var length = '{1,' + (options.length || 30) + '}';
+  var match = options.match || '\\w' + length;
 
-  match = opts.dot && !opts.match ? '[A-Za-z0-9_.]' + length : match
+  match = options.dot && !options.match ? '[A-Za-z0-9_.]' + length : match
 
-  return new RegExp(startSpace + '@(' + match + ')' + endSpace, opts.flags);
+  return new RegExp(startSpace + '@(' + match + ')' + endSpace, options.flags);
 };

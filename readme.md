@@ -10,8 +10,61 @@ $ npm install mentions-regex
 $ npm test
 ```
 
+
 ## Usage
 > For more use-cases see [tests](./test.js)
+
+```js
+var mentionsRegex = require('mentions-regex');
+
+mentionsRegex().test('github @tunnckoCore')
+//=> false
+
+mentionsRegex({flags: 'g'}).test('github @tunnckoCore')
+//=> false
+
+mentionsRegex({endSpace: false}).test('github @tunnckoCore')
+//=> true
+
+var str = '@first github @tunnckoCore and @face some @al.so email@here.com global @last'
+
+str.match(mentionsRegex())
+//=> [' @tunnckoCore ']
+
+str.match(mentionsRegex({flags: 'g'}))
+//=> [' @tunnckoCore ', ' @face ']
+
+str.match(mentionsRegex({flags: 'g', startSpace: false}))
+//=> [' @tunnckoCore ', ' @face ', '@face ']
+
+str.match(mentionsRegex({flags: 'g', endSpace: false}))
+//=> [' @tunnckoCore ', ' @face ', ' @al', ' @last']
+
+str.match(mentionsRegex({flags: 'g', startSpace: false, endSpace: false}))
+//=> ['@first', '@tunnckoCore', '@face', '@al', '@here', '@last']
+
+str.match(mentionsRegex({length: 5}))
+//=> [' @face ']
+
+str.match(mentionsRegex({flags: 'g', dot: true}))
+//=> [' @tunnckoCore ', ' @face ', ' @al.so ']
+
+str.match(mentionsRegex({flags: 'g', dot: true, length: 5}))
+//=> [' @face ', ' @al.so ']
+```
+
+
+## [.metntionsRegex](index.js#L16)
+> Default regex is `\s+@(\w{1,30}|[A-Za-z0-9_.]{1,30})\s+`
+
+* `[options]` **{Object}**
+  - `startSpace` **{Boolean}** if `false`, will remove starting `\s+` from regex
+  - `endSpace` **{Boolean}** if `false`, will remove ending `\s+` from regex
+  - `length` **{Number}** maximum length of mention, default `30`
+  - `match` **{String}** what to match, default is `\w{1,30}`
+  - `flags` **{String}** every valid RegExp flag, default `undefined`
+  - `dot` **{Boolean}** replace options.match which is `\w` with `[A-Za-z0-9_.]`
+* `return` **{RegExp}**
 
 
 ## Authors & Contributors
