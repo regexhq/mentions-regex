@@ -12,7 +12,7 @@ $ npm test
 
 
 ## [.metntionsRegex](index.js#L16)
-> Default regex is `\s+@(\w{1,30}|[A-Za-z0-9_.]{1,30})\s+`
+> Default regex is `\s+@(\w{1,30})\s+`
 
 * `[options]` **{Object}**
   - `startSpace` **{Boolean}** if `false`, will remove starting `\s+` from regex
