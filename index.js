@@ -10,13 +10,10 @@
 module.exports =  function metntionsRegex(opts) {
   opts = opts || {};
 
-  var space = '(?:\\s+)';
-  var dot = opts.dot || false;
-  var len = opts.length || 30;
-  var length = '{1,' + len + '}';
+  var startSpace = opts.startSpace === false ? '' : '(?:\\s+)';
+  var endSpace = opts.endSpace === false ? '' : '(?:\\s+)';
+  var length = '{1,' + (opts.length || 30) + '}';
   var match = opts.match || '\\w' + length;
-  var startSpace = opts.startSpace === false ? '' : space;
-  var endSpace = opts.endSpace === false ? '' : space;
 
   match = opts.dot && !opts.match ? '[A-Za-z0-9_.]' + length : match
 
