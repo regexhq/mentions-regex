@@ -1,4 +1,4 @@
-# [![NPM version][npmjs-img]][npmjs-url] [![MIT license][license-img]][license-url] [![Build Status][travis-img]][travis-url] [![regexps org][regexps-img]][regexps-url]
+[![NPM version][npmjs-img]][npmjs-url] [![MIT license][license-img]][license-url] [![Build Status][travis-img]][travis-url] [![regexps org][regexps-img]][regexps-url]  
 > The correct mention(s) regex. Regex done right!
 
 
