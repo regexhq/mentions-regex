@@ -88,20 +88,20 @@ Released under the [`MIT`][license-url] license.
 
 
 [npmjs-url]: http://npm.im/mentions-regex
-[npmjs-img]: http://img.shields.io/npm/v/mentions-regex.svg
+[npmjs-img]: https://img.shields.io/npm/v/mentions-regex.svg?style=flat&label=mentions-regex
 [npmjs-ico]: https://nodei.co/npm/mentions-regex.svg?mini=true
 
 [coveralls-url]: https://coveralls.io/r/regexps/mentions-regex?branch=master
-[coveralls-img]: https://img.shields.io/coveralls/regexps/mentions-regex.svg
+[coveralls-img]: https://img.shields.io/coveralls/regexps/mentions-regex.svg?style=flat
 
 [license-url]: https://github.com/regexps/mentions-regex/blob/master/license.md
-[license-img]: http://img.shields.io/badge/license-MIT-blue.svg
+[license-img]: https://img.shields.io/badge/license-MIT-blue.svg
 
 [travis-url]: https://travis-ci.org/regexps/mentions-regex
-[travis-img]: https://travis-ci.org/regexps/mentions-regex.svg
+[travis-img]: https://img.shields.io/travis/regexps/mentions-regex.svg?style=flat
 
 [depstat-url]: https://david-dm.org/regexps/mentions-regex
-[depstat-img]: https://david-dm.org/regexps/mentions-regex.svg
+[depstat-img]: https://img.shields.io/david/regexps/mentions-regex.svg?style=flat
 
 [author-gittip-img]: http://img.shields.io/gittip/tunnckoCore.svg
 [author-gittip]: https://www.gittip.com/tunnckoCore
