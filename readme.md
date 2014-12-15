@@ -11,6 +11,19 @@ $ npm test
 ```
 
 
+## [.metntionsRegex](index.js#L16)
+> Default regex is `\s+@(\w{1,30}|[A-Za-z0-9_.]{1,30})\s+`
+
+* `[options]` **{Object}**
+  - `startSpace` **{Boolean}** if `false`, will remove starting `\s+` from regex
+  - `endSpace` **{Boolean}** if `false`, will remove ending `\s+` from regex
+  - `length` **{Number}** maximum length of mention, default `30`
+  - `match` **{String}** what to match, default is `\w{1,30}`
+  - `flags` **{String}** every valid RegExp flag, default `undefined`
+  - `dot` **{Boolean}** replace options.match which is `\w` with `[A-Za-z0-9_.]`
+* `return` **{RegExp}**
+
+
 ## Usage
 > For more use-cases see [tests](./test.js)
 
@@ -58,19 +71,6 @@ str.match(mentionsRegex({flags: 'g', dot: true, startSpace: false}))
 str.match(mentionsRegex({flags: 'g', dot: true, startSpace: false, endSpace: false}))
 //=> ['@first', '@tunnckoCore', '@face', '@al.so', '@here.com ', '@last']
 ```
-
-
-## [.metntionsRegex](index.js#L16)
-> Default regex is `\s+@(\w{1,30}|[A-Za-z0-9_.]{1,30})\s+`
-
-* `[options]` **{Object}**
-  - `startSpace` **{Boolean}** if `false`, will remove starting `\s+` from regex
-  - `endSpace` **{Boolean}** if `false`, will remove ending `\s+` from regex
-  - `length` **{Number}** maximum length of mention, default `30`
-  - `match` **{String}** what to match, default is `\w{1,30}`
-  - `flags` **{String}** every valid RegExp flag, default `undefined`
-  - `dot` **{Boolean}** replace options.match which is `\w` with `[A-Za-z0-9_.]`
-* `return` **{RegExp}**
 
 
 ## Authors & Contributors
