@@ -20,7 +20,7 @@ $ npm test
   - `length` **{Number}** maximum length of mention, default `30`
   - `match` **{String}** what to match, default is `\w{1,30}`
   - `flags` **{String}** every valid RegExp flag, default `undefined`
-  - `dot` **{Boolean}** replace options.match which is `\w` with `[A-Za-z0-9_.]`
+  - `dot` **{Boolean}** will use `[A-Za-z0-9_.]` instead of `\w`
 * `return` **{RegExp}**
 
 
