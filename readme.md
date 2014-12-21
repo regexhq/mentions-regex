@@ -1,8 +1,4 @@
-[![npm version][npmjs-img]][npmjs-url]
-[![mit license][license-img]][license-url]
-[![build status][travis-img]][travis-url]
-[![deps status][daviddm-img]][daviddm-url]
-[![regexps org][regexps-img]][regexps-url] 
+## [![npm versi][npmjs-img]][npmjs-url] [![mit license][license-img]][license-url] [![build status][travis-img]][travis-url] [![deps status][daviddm-img]][daviddm-url] [![regexps org][regexps-img]][regexps-url] 
 
 > The correct mention(s) regex. Regular expression for twitter, facebook, github, etc user mentions
 
