@@ -1,6 +1,6 @@
 {
   "name": "mentions-regex",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "The correct mention(s) regex. Regular expression for twitter, facebook, github, etc user mentions",
   "scripts": {
     "lint": "jshint . && jscs . --reporter inline",
