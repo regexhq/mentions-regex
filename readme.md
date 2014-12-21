@@ -1,11 +1,13 @@
-[![NPM version][npmjs-img]][npmjs-url] [![MIT license][license-img]][license-url] [![Build Status][travis-img]][travis-url] [![regexps org][regexps-img]][regexps-url]  
-> The correct mention(s) regex. Regex done right!
+[![npm version][npmjs-img]][npmjs-url]
+[![mit license][license-img]][license-url]
+[![build status][travis-img]][travis-url]
+[![deps status][daviddm-img]][daviddm-url]
+[![regexps org][regexps-img]][regexps-url] 
 
+> The correct mention(s) regex. Regular expression for twitter, facebook, github, etc user mentions
 
-## Install [![Nodei.co stats][npmjs-ico]][npmjs-url] 
-> Install with [npm](https://npmjs.org)
-
-```
+## Install
+```bash
 $ npm install mentions-regex
 $ npm test
 ```
@@ -73,11 +75,11 @@ str.match(mentionsRegex({flags: 'g', dot: true, startSpace: false, endSpace: fal
 ```
 
 
-## Authors & Contributors
-**Charlike Mike Reagent** [![author tips][author-gittip-img]][author-gittip]
-+ [gittip/tunnckoCore][author-gittip]
-+ [github/tunnckoCore][author-github]
+## Author
+**Charlike Mike Reagent**
++ [gratipay/tunnckoCore][author-gratipay]
 + [twitter/tunnckoCore][author-twitter]
++ [github/tunnckoCore][author-github]
 + [npmjs/tunnckoCore][author-npmjs]
 + [more ...][contrib-more]
 
@@ -89,7 +91,6 @@ Released under the [`MIT`][license-url] license.
 
 [npmjs-url]: http://npm.im/mentions-regex
 [npmjs-img]: https://img.shields.io/npm/v/mentions-regex.svg?style=flat&label=mentions-regex
-[npmjs-ico]: https://nodei.co/npm/mentions-regex.svg?mini=true
 
 [coveralls-url]: https://coveralls.io/r/regexps/mentions-regex?branch=master
 [coveralls-img]: https://img.shields.io/coveralls/regexps/mentions-regex.svg?style=flat
@@ -100,13 +101,12 @@ Released under the [`MIT`][license-url] license.
 [travis-url]: https://travis-ci.org/regexps/mentions-regex
 [travis-img]: https://img.shields.io/travis/regexps/mentions-regex.svg?style=flat
 
-[depstat-url]: https://david-dm.org/regexps/mentions-regex
-[depstat-img]: https://img.shields.io/david/regexps/mentions-regex.svg?style=flat
+[daviddm-url]: https://david-dm.org/regexps/mentions-regex
+[daviddm-img]: https://img.shields.io/david/dev/regexps/mentions-regex.svg?style=flat
 
-[author-gittip-img]: http://img.shields.io/gittip/tunnckoCore.svg
-[author-gittip]: https://www.gittip.com/tunnckoCore
-[author-github]: https://github.com/tunnckoCore
+[author-gratipay]: https://gratipay.com/tunnckoCore
 [author-twitter]: https://twitter.com/tunnckoCore
+[author-github]: https://github.com/tunnckoCore
 [author-npmjs]: https://npmjs.org/~tunnckocore
 
 [contrib-more]: http://j.mp/1stW47C
@@ -114,3 +114,10 @@ Released under the [`MIT`][license-url] license.
 
 [regexps-url]: https://github.com/regexps
 [regexps-img]: http://img.shields.io/badge/regexps-approved-brightgreen.svg?style=flat
+
+***
+
+_Powered and automated by [readdirp + hogan.js](https://github.com/tunnckoCore), December 21, 2014_
+
+
+

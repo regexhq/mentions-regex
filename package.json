@@ -1,30 +1,38 @@
 {
   "name": "mentions-regex",
-  "description": "The correct mention(s) regex. Regex done right!",
   "version": "0.1.0",
+  "description": "The correct mention(s) regex. Regular expression for twitter, facebook, github, etc user mentions",
   "scripts": {
-    "test": "npm install && node_modules/.bin/mocha --require should"
+    "lint": "jshint . && jscs . --reporter inline",
+    "test": "mocha -r should"
   },
   "author": {
     "name": "Charlike Make Reagent",
     "email": "mameto_100@mail.bg",
     "url": "https://github.com/tunnckoCore"
   },
-  "keywords": [
-    "regex",
-    "regexp",
-    "regexps",
-    "mentions",
-    "mention",
-    "twitter",
-    "github",
-    "facebook",
-    "google"
-  ],
   "repository": {
     "type": "git",
     "url": "git://github.com/regexps/mentions-regex.git"
   },
+  "keywords": [
+    "correct",
+    "etc",
+    "expression",
+    "facebook",
+    "github",
+    "google",
+    "mention",
+    "mentions",
+    "regex",
+    "regexp",
+    "regexps",
+    "regular",
+    "regular expression",
+    "regular expressions",
+    "twitter",
+    "user"
+  ],
   "license": {
     "type": "MIT",
     "url": "https://github.com/regexps/mentions-regex/blob/master/license.md"
@@ -33,9 +41,5 @@
   "devDependencies": {
     "mocha": "^2.0.1",
     "should": "^4.4.1"
-  },
-  "engines": {
-    "node": ">= 0.10.33",
-    "npm": ">= 1.4.28"
   }
 }
