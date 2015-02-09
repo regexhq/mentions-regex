@@ -25,6 +25,11 @@ it('should match mentions in a string', function () {
   assert.equal(mentionsRegex().exec('a @abc @foo xyz')[1], 'abc');
 });
 
+it('should not match email addresses', function () {
+  assert.equal(mentionsRegex().exec('a someone@abc.email.com'), null);
+  assert.equal(mentionsRegex().exec('a someone@abc.email.com @foo xyz')[1], 'foo');
+});
+
 it('should match mentions with a dot', function () {
   assert.equal(mentionsRegex().test('@abc.xyz '), true);
   assert.equal(mentionsRegex().exec('@abc.xyz ')[1], 'abc.xyz');
