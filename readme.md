@@ -1,73 +1,41 @@
 ## [![npm versi][npmjs-img]][npmjs-url] [![mit license][license-img]][license-url] [![build status][travis-img]][travis-url] [![deps status][daviddm-img]][daviddm-url] [![regexps org][regexps-img]][regexps-url] 
 
-> The correct mention(s) regex. Regular expression for twitter, facebook, github, etc user mentions
+> Regular expression for matching `@mentions`, as used on twitter, facebook, github, etc.
 
 ## Install
+
 ```bash
-$ npm install mentions-regex
-$ npm test
+$ npm i mentions-regex && npm test
 ```
 
 
-## [.metntionsRegex](index.js#L16)
-> Default regex is `\s+@(\w{1,30})\s+`
-
-* `[options]` **{Object}**
-  - `startSpace` **{Boolean}** if `false`, will remove starting `\s+` from regex
-  - `endSpace` **{Boolean}** if `false`, will remove ending `\s+` from regex
-  - `length` **{Number}** maximum length of mention, default `30`
-  - `match` **{String}** what to match, default is `\w{1,30}`
-  - `flags` **{String}** every valid RegExp flag, default `undefined`
-  - `dot` **{Boolean}** will use `[A-Za-z0-9_.]` instead of `\w`
-* `return` **{RegExp}**
-
-
 ## Usage
-> For more use-cases see [tests](./test.js)
+
+For more use-cases see the [tests](./test.js)
 
 ```js
-var mentionsRegex = require('mentions-regex');
+var regex = require('mentions-regex');
 
-mentionsRegex().test('github @tunnckoCore')
-//=> false
-
-mentionsRegex({flags: 'g'}).test('github @tunnckoCore')
-//=> false
-
-mentionsRegex({endSpace: false}).test('github @tunnckoCore')
+regex().test('github @tunnckoCore')
 //=> true
 
-var str = '@first git @tunnckoCore and @face some @al.so email@here.com glob @last'
+regex().exec('github @tunnckoCore');
+//=> [ ' @tunnckoCore', 'tunnckoCore', ... ]
+```
 
-str.match(mentionsRegex())
-//=> [' @tunnckoCore ']
 
-str.match(mentionsRegex({flags: 'g'}))
-//=> [' @tunnckoCore ', ' @face ']
+By default, dots in screen names are invalid:
 
-str.match(mentionsRegex({flags: 'g', startSpace: false}))
-//=> ['@first ', '@tunnckoCore ', '@face ']
+```js
+regex().test('@foo.bar');
+//=> false
+```
 
-str.match(mentionsRegex({flags: 'g', endSpace: false}))
-//=> [' @tunnckoCore ', ' @face ', ' @al', ' @last']
+To allow dots, pass `true`:
 
-str.match(mentionsRegex({flags: 'g', startSpace: false, endSpace: false}))
-//=> ['@first', '@tunnckoCore', '@face', '@al', '@here', '@last']
-
-str.match(mentionsRegex({length: 5}))
-//=> [' @face ']
-
-str.match(mentionsRegex({flags: 'g', dot: true}))
-//=> [' @tunnckoCore ', ' @face ', ' @al.so ']
-
-str.match(mentionsRegex({flags: 'g', dot: true, length: 5}))
-//=> [' @face ', ' @al.so ']
-
-str.match(mentionsRegex({flags: 'g', dot: true, startSpace: false}))
-//=> ['@first ', '@tunnckoCore ', '@face ', '@al.so ', '@here.com ']
-
-str.match(mentionsRegex({flags: 'g', dot: true, startSpace: false, endSpace: false}))
-//=> ['@first', '@tunnckoCore', '@face', '@al.so', '@here.com ', '@last']
+```js
+regex(true).test('@foo.bar');
+//=> true
 ```
 
 
