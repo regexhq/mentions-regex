@@ -1,13 +1,13 @@
 {
   "name": "mentions-regex",
   "version": "1.0.1",
-  "description": "The correct mention(s) regex. Regular expression for twitter, facebook, github, etc user mentions",
+  "description": "Regular expression for matching `@mentions`, as used on twitter, facebook, github, etc.",
   "scripts": {
     "lint": "jshint . && jscs . --reporter inline",
     "test": "mocha -r should"
   },
   "author": {
-    "name": "Charlike Make Reagent",
+    "name": "Charlike Mike Reagent",
     "email": "mameto_100@mail.bg",
     "url": "https://github.com/tunnckoCore"
   },
@@ -15,24 +15,6 @@
     "type": "git",
     "url": "git://github.com/regexps/mentions-regex.git"
   },
-  "keywords": [
-    "correct",
-    "etc",
-    "expression",
-    "facebook",
-    "github",
-    "google",
-    "mention",
-    "mentions",
-    "regex",
-    "regexp",
-    "regexps",
-    "regular",
-    "regular expression",
-    "regular expressions",
-    "twitter",
-    "user"
-  ],
   "license": {
     "type": "MIT",
     "url": "https://github.com/regexps/mentions-regex/blob/master/license.md"
@@ -41,5 +23,17 @@
   "devDependencies": {
     "mocha": "^2.0.1",
     "should": "^4.4.1"
-  }
+  },
+  "keywords": [
+    "facebook",
+    "github",
+    "google",
+    "mention",
+    "mentions",
+    "regex",
+    "regexp",
+    "regexps",
+    "regular expression",
+    "twitter"
+  ]
 }

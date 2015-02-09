@@ -1,13 +1,50 @@
-/**
- * mentions-regex <https://github.com/tunnckoCore/mentions-regex>
+/*!
+ * mentions-regex <https://github.com/regexps/mentions-regex>
  *
- * Copyright (c) 2014 Charlike Mike Reagent, contributors.
- * Released under the MIT license.
+ * Copyright (c) 2014-2015 Charlike Mike Reagent, contributors.
+ * Licensed under the MIT license.
  */
 
 'use strict';
 
-var mentionsRegex = require('./index');
-var str = str = '@first git @tunnckoCore and @face some @al.so email@here.com glob @last'
-var res = str.match(mentionsRegex({flags: 'g', dot: true, startSpace: false, endSpace: false}))
-console.log(res)
+var assert = require('assert');
+var mentionsRegex = require('./');
+
+function match(str) {
+  return str.match(new RegExp(mentionsRegex().source, 'g'));
+}
+
+it('should match mentions in a string', function () {
+  assert.deepEqual(match('a @abc @foo xyz @baz'), [' @abc', ' @foo', ' @baz']);
+  assert.equal(mentionsRegex().exec('@abc')[1], 'abc');
+  assert.equal(mentionsRegex().exec(' @abc')[1], 'abc');
+  assert.equal(mentionsRegex().exec(' @abc ')[1], 'abc');
+  assert.equal(mentionsRegex().exec('@abc ')[1], 'abc');
+  assert.equal(mentionsRegex().exec('@abc.xyz ')[1], 'abc.xyz');
+  assert.equal(mentionsRegex().exec('@abc @foo xyz')[1], 'abc');
+  assert.equal(mentionsRegex().exec('a @abc @foo xyz')[1], 'abc');
+});
+
+it('should not match email addresses', function () {
+  assert.equal(mentionsRegex().exec('a someone@abc.email.com'), null);
+  assert.equal(mentionsRegex().exec('a someone@abc.email.com @foo xyz')[1], 'foo');
+});
+
+it('should match mentions with a dot', function () {
+  assert.equal(mentionsRegex().test('@abc.xyz '), true);
+  assert.equal(mentionsRegex().exec('@abc.xyz ')[1], 'abc.xyz');
+});
+
+it('should not match a dot in a mention when `nodot` is true', function () {
+  assert.equal(mentionsRegex(true).test('@abc.xyz '), false);
+  assert.equal(mentionsRegex(true).exec('@abc.xyz '), null);
+});
+
+it('should not match invalid mentions', function () {
+  assert.equal(mentionsRegex().exec('abc @$foo xyz'), null);
+  assert.equal(mentionsRegex().exec('abc @!foo xyz'), null);
+  assert.equal(mentionsRegex().exec('abc @#foo xyz'), null);
+  assert.equal(mentionsRegex().exec('abc @\\foo xyz'), null);
+  assert.equal(mentionsRegex().exec('@ abc@foo xyz'), null);
+  assert.equal(mentionsRegex().exec('@@abc@foo xyz'), null);
+});
