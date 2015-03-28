@@ -21,6 +21,24 @@ npm test
 
 ```js
 var metntionsRegex = require('metntions-regex');
+
+metntionsRegex().test('foo @bar baz');
+//=> true
+
+metntionsRegex().exec('foo @bar baz')[1];
+//=> 'bar'
+
+metntionsRegex().test('foo email@bar.com baz');
+//=> false
+
+metntionsRegex(true).test('foo email@bar.com baz');
+//=> false
+
+metntionsRegex(true).test('foo @bar.com baz');
+//=> true
+
+metntionsRegex(true).exec('foo @bar.com baz')[1];
+//=> 'bar.com'
 ```
 
 
