@@ -8,7 +8,7 @@
 'use strict';
 
 /**
- * Compatible twitter mentions regex
+ * Compatible twitter mentions regex, not only of course!
  *
  * @param  {Boolean} `dot` if `true` it will allow to match dots
  * @return {RegExp}

@@ -1,24 +1,18 @@
-## [![npm versi][npmjs-img]][npmjs-url] [![mit license][license-img]][license-url] [![build status][travis-img]][travis-url] [![deps status][daviddm-img]][daviddm-url] [![regexps org][regexps-img]][regexps-url] 
+## [![npm versi][npmjs-img]][npmjs-url] [![mit license][license-img]][license-url] [![build status][travis-img]][travis-url] [![coveralls img][coveralls-img]][coveralls-url]  [![deps status][daviddm-img]][daviddm-url]
 
-> The correct mention(s) regex. Regular expression for twitter, facebook, github, etc user mentions
+> 100% twitter compatible `@mentions` regex! Regular expression for matching `@username` mentions, as used on twitter, facebook, github, etc.
 
 ## Install
-```bash
-$ npm install mentions-regex
-$ npm test
+```
+npm i --save mentions-regex
+npm test
 ```
 
 
-## [.metntionsRegex](index.js#L16)
-> Default regex is `\s+@(\w{1,30})\s+`
+## [metntionsRegex](index.js#L17)
+> Compatible twitter mentions regex, not only of course!
 
-* `[options]` **{Object}**
-  - `startSpace` **{Boolean}** if `false`, will remove starting `\s+` from regex
-  - `endSpace` **{Boolean}** if `false`, will remove ending `\s+` from regex
-  - `length` **{Number}** maximum length of mention, default `30`
-  - `match` **{String}** what to match, default is `\w{1,30}`
-  - `flags` **{String}** every valid RegExp flag, default `undefined`
-  - `dot` **{Boolean}** will use `[A-Za-z0-9_.]` instead of `\w`
+* `[dot]` **{Boolean}** if `true` it will allow to match dots
 * `return` **{RegExp}**
 
 
@@ -26,48 +20,7 @@ $ npm test
 > For more use-cases see [tests](./test.js)
 
 ```js
-var mentionsRegex = require('mentions-regex');
-
-mentionsRegex().test('github @tunnckoCore')
-//=> false
-
-mentionsRegex({flags: 'g'}).test('github @tunnckoCore')
-//=> false
-
-mentionsRegex({endSpace: false}).test('github @tunnckoCore')
-//=> true
-
-var str = '@first git @tunnckoCore and @face some @al.so email@here.com glob @last'
-
-str.match(mentionsRegex())
-//=> [' @tunnckoCore ']
-
-str.match(mentionsRegex({flags: 'g'}))
-//=> [' @tunnckoCore ', ' @face ']
-
-str.match(mentionsRegex({flags: 'g', startSpace: false}))
-//=> ['@first ', '@tunnckoCore ', '@face ']
-
-str.match(mentionsRegex({flags: 'g', endSpace: false}))
-//=> [' @tunnckoCore ', ' @face ', ' @al', ' @last']
-
-str.match(mentionsRegex({flags: 'g', startSpace: false, endSpace: false}))
-//=> ['@first', '@tunnckoCore', '@face', '@al', '@here', '@last']
-
-str.match(mentionsRegex({length: 5}))
-//=> [' @face ']
-
-str.match(mentionsRegex({flags: 'g', dot: true}))
-//=> [' @tunnckoCore ', ' @face ', ' @al.so ']
-
-str.match(mentionsRegex({flags: 'g', dot: true, length: 5}))
-//=> [' @face ', ' @al.so ']
-
-str.match(mentionsRegex({flags: 'g', dot: true, startSpace: false}))
-//=> ['@first ', '@tunnckoCore ', '@face ', '@al.so ', '@here.com ']
-
-str.match(mentionsRegex({flags: 'g', dot: true, startSpace: false, endSpace: false}))
-//=> ['@first', '@tunnckoCore', '@face', '@al.so', '@here.com ', '@last']
+var metntionsRegex = require('metntions-regex');
 ```
 
 
@@ -81,7 +34,7 @@ str.match(mentionsRegex({flags: 'g', dot: true, startSpace: false, endSpace: fal
 
 
 ## License [![MIT license][license-img]][license-url]
-Copyright (c) 2014 [Charlike Mike Reagent][contrib-more], [contributors][contrib-graf].  
+Copyright (c) 2014-2015 [Charlike Mike Reagent][contrib-more], [contributors][contrib-graf].  
 Released under the [`MIT`][license-url] license.
 
 
@@ -113,7 +66,7 @@ Released under the [`MIT`][license-url] license.
 
 ***
 
-_Powered and automated by [readdirp + hogan.js](https://github.com/tunnckoCore), December 21, 2014_
+_Proudly generated with [docks(1)](https://github.com/tunnckoCore) on March 28, 2015_
 
 
 
