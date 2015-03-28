@@ -1,5 +1,9 @@
 
 
+## v2.0.1 / March 28, 2015
+- Release v2.0.1 / npm@v2.0.1
+- run docks(1), fix typo, nah..
+
 ## v2.0.0 / March 28, 2015
 - Release v2.0.0 / npm@v2.0.0
 - update usage

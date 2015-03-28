@@ -1,6 +1,6 @@
 {
   "name": "mentions-regex",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "100% twitter compatible `@mentions` regex! Regular expression for matching `@username` mentions, as used on twitter, facebook, github, etc.",
   "scripts": {
     "test": "mocha",
