@@ -1,7 +1,7 @@
 /**
- * mentions-regex <https://github.com/tunnckoCore/mentions-regex>
+ * mentions-regex <https://github.com/regexps/mentions-regex>
  *
- * Copyright (c) 2014 Charlike Mike Reagent, contributors.
+ * Copyright (c) 2014-2015 Charlike Mike Reagent, contributors.
  * Released under the MIT license.
  */
 
