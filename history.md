@@ -1,8 +1,25 @@
+
+
+## v2.0.0 / March 28, 2015
+- Release v2.0.0 / npm@v2.0.0
+- update usage
+- run docks(1), close #1, close #2
+- add tons of tests
+- add istanbul coverage
+- add coveralls
+- update regex
+- faster travis builds
+- update license
+- update package.json
+- add fixtures
+
 ## v1.0.1 / December 21, 2014
+- Release v1.0.1 / npm@v1.0.1
 - fix badge`s heading
 
 ## v1.0.0 / December 21, 2014
+- Release v1.0.0 / npm@v1.0.0
 - release, fix readme styles
 
 ## v0.1.0 / December 15, 2014
-- init commits
+- first commits / npm@v0.1.0
