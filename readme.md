@@ -9,7 +9,7 @@ npm test
 ```
 
 
-## [metntionsRegex](index.js#L17)
+## [mentionsRegex](index.js#L18)
 > Compatible twitter mentions regex, not only of course!
 
 * `[dot]` **{Boolean}** if `true` it will allow to match dots
@@ -20,24 +20,24 @@ npm test
 > For more use-cases see [tests](./test.js)
 
 ```js
-var metntionsRegex = require('metntions-regex');
+var mentionsRegex = require('mentions-regex');
 
-metntionsRegex().test('foo @bar baz');
+mentionsRegex().test('foo @bar baz');
 //=> true
 
-metntionsRegex().exec('foo @bar baz')[1];
+mentionsRegex().exec('foo @bar baz')[1];
 //=> 'bar'
 
-metntionsRegex().test('foo email@bar.com baz');
+mentionsRegex().test('foo email@bar.com baz');
 //=> false
 
-metntionsRegex(true).test('foo email@bar.com baz');
+mentionsRegex(true).test('foo email@bar.com baz');
 //=> false
 
-metntionsRegex(true).test('foo @bar.com baz');
+mentionsRegex(true).test('foo @bar.com baz');
 //=> true
 
-metntionsRegex(true).exec('foo @bar.com baz')[1];
+mentionsRegex(true).exec('foo @bar.com baz')[1];
 //=> 'bar.com'
 ```
 

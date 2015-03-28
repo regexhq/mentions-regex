@@ -10,11 +10,12 @@
 /**
  * Compatible twitter mentions regex, not only of course!
  *
+ * @name   mentionsRegex
  * @param  {Boolean} `dot` if `true` it will allow to match dots
  * @return {RegExp}
  * @api public
  */
-module.exports =  function metntionsRegex(dot) {
+module.exports =  function mentionsRegex(dot) {
   if (dot) {
     // e.g. @google.com will match `google.com`
     return /(?:^|[^a-zA-Z0-9_＠!@#$%&*])(?:(?:@|＠)(?!\/))([a-zA-Z0-9/_.]{1,15})(?:\b(?!@|＠)|$)/;
