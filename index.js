@@ -8,20 +8,17 @@
 'use strict';
 
 /**
- * The correct mention(s) regex. Regex done right!
+ * Compatible twitter mentions regex
  *
- * @param  {Object} `options`
+ * @param  {Boolean} `dot` if `true` it will allow to match dots
  * @return {RegExp}
+ * @api public
  */
-module.exports =  function metntionsRegex(options) {
-  options = options || {};
-
-  var startSpace = options.startSpace === false ? '' : '\\s+';
-  var endSpace = options.endSpace === false ? '' : '\\s+';
-  var length = '{1,' + (options.length || 30) + '}';
-  var match = options.match || '\\w' + length;
-
-  match = options.dot && !options.match ? '[A-Za-z0-9_.]' + length : match
-
-  return new RegExp(startSpace + '@(' + match + ')' + endSpace, options.flags);
+module.exports =  function metntionsRegex(dot) {
+  if (dot) {
+    // e.g. @google.com will match `google.com`
+    return /(?:^|[^a-zA-Z0-9_＠!@#$%&*])(?:(?:@|＠)(?!\/))([a-zA-Z0-9/_.]{1,15})(?:\b(?!@|＠)|$)/;
+  }
+  // e.g. @google.com will match `google`
+  return /(?:^|[^a-zA-Z0-9_＠!@#$%&*])(?:(?:@|＠)(?!\/))([a-zA-Z0-9/_]{1,15})(?:\b(?!@|＠)|$)/;
 };
