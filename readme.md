@@ -42,6 +42,15 @@ mentionsRegex(true).exec('foo @bar.com baz')[1];
 ```
 
 
+## Related
+- [abbrev-kindof](https://github.com/tunnckoCore/abbrev-kindof#readme): `kind-of` with single letter abbreviations to javascript native types, like `kindof(val, 'soa')` will return true if `val` is string, object or array.
+- [copyright-regex](https://github.com/regexps/copyright-regex): Regex for matching and parsing copyright statements.
+- [dirname-regex](https://github.com/regexps/dirname-regex): Regular expression for matching the directory part of a file path.
+- [glob-path-regex](https://github.com/regexps/glob-path-regex): Regular expression for matching the parts of glob pattern.
+- [regexify](https://github.com/hemanth/regexify): Regex everything!
+
+
+
 ## Author
 **Charlike Mike Reagent**
 + [gratipay/tunnckoCore][author-gratipay]
