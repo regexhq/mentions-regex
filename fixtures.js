@@ -36,7 +36,7 @@ module.exports = {
     'foo @bar~baz qux',
     'foo @bar|baz qux',
     'foo @bar"baz qux',
-    'foo @bar\'baz qux',
+    "foo @bar'baz qux",
 
     'foo .@bar.baz qux',
     'foo ,@bar,baz qux',
@@ -60,7 +60,7 @@ module.exports = {
     'foo ~@bar~baz qux',
     'foo |@bar|baz qux',
     'foo "@bar"baz qux',
-    'foo \'@bar\'baz qux'
+    "foo '@bar'baz qux"
   ],
   shouldNotMatch: [
     'foo bar@baz qux',
@@ -95,7 +95,7 @@ module.exports = {
     'foo @~bar~baz qux',
     'foo @|bar|baz qux',
     'foo @"bar"baz qux',
-    'foo @\'bar\'baz qux',
+    "foo @'bar'baz qux",
     'foo @.bar baz qux',
     'foo @,bar baz qux',
     'foo @!bar baz qux',
@@ -124,7 +124,7 @@ module.exports = {
     'foo @~bar baz qux',
     'foo @|bar baz qux',
     'foo @"bar baz qux',
-    'foo @\'bar baz qux',
+    "foo @'bar baz qux",
     'foo 2@222 baz qux',
     'foo 2@bar baz qux',
     'foo !@bar!baz qux',
@@ -136,4 +136,4 @@ module.exports = {
     'foo _@bar_baz qux',
     'foo _@bar baz qux'
   ]
-};
+}

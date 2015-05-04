@@ -3,9 +3,8 @@
   "version": "2.0.2",
   "description": "100% twitter compatible `@mentions` regex! Regular expression for matching `@username` mentions, as used on twitter, facebook, github, etc.",
   "scripts": {
-    "test": "mocha",
-    "test-cov": "istanbul cover _mocha",
-    "test-travis": "istanbul cover _mocha --report lcovonly"
+    "test": "standard && node test.js",
+    "travis": "standard && istanbul cover test.js --report lcovonly"
   },
   "author": {
     "name": "Charlike Mike Reagent",
@@ -39,7 +38,8 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "istanbul": "~0.3.11",
-    "mocha": "~2.2.1"
+    "assertit": "^0.1.0",
+    "istanbul": "^0.3.9",
+    "standard": "^3.7.3"
   }
 }

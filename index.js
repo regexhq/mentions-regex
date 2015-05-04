@@ -5,7 +5,7 @@
  * Released under the MIT license.
  */
 
-'use strict';
+'use strict'
 
 /**
  * Compatible twitter mentions regex, not only of course!
@@ -15,11 +15,11 @@
  * @return {RegExp}
  * @api public
  */
-module.exports =  function mentionsRegex(dot) {
+module.exports = function mentionsRegex (dot) {
   if (dot) {
     // e.g. @google.com will match `google.com`
-    return /(?:^|[^a-zA-Z0-9_＠!@#$%&*])(?:(?:@|＠)(?!\/))([a-zA-Z0-9/_.]{1,15})(?:\b(?!@|＠)|$)/;
+    return /(?:^|[^a-zA-Z0-9_＠!@#$%&*])(?:(?:@|＠)(?!\/))([a-zA-Z0-9/_.]{1,15})(?:\b(?!@|＠)|$)/
   }
   // e.g. @google.com will match `google`
-  return /(?:^|[^a-zA-Z0-9_＠!@#$%&*])(?:(?:@|＠)(?!\/))([a-zA-Z0-9/_]{1,15})(?:\b(?!@|＠)|$)/;
-};
+  return /(?:^|[^a-zA-Z0-9_＠!@#$%&*])(?:(?:@|＠)(?!\/))([a-zA-Z0-9/_]{1,15})(?:\b(?!@|＠)|$)/
+}
