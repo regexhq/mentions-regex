@@ -34,7 +34,7 @@
   ],
   "license": {
     "type": "MIT",
-    "url": "https://github.com/regexps/mentions-regex/blob/master/license.md"
+    "url": "https://github.com/regexps/mentions-regex/blob/master/LICENSE.md"
   },
   "dependencies": {},
   "devDependencies": {
