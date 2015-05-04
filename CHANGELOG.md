@@ -1,5 +1,12 @@
 
 
+## v2.0.3 / May 4, 2015
+- Release v2.0.3 / npm@v2.0.3
+- remove .gitattributes
+- update badges, license links
+- rename history, readme, license to be uppercased to draw attention
+- apply standard code style
+
 ## v2.0.2 / May 3, 2015
 - Release v2.0.2 / npm@v2.0.2
 - add related section
