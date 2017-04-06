@@ -40,6 +40,6 @@
   "devDependencies": {
     "assertit": "^0.1.0",
     "istanbul": "^0.4.5",
-    "standard": "^8.5.0"
+    "standard": "^10.0.1"
   }
 }
